@@ -18,3 +18,7 @@
 .pixel-art-font {
   font-family: 'Pixel Art', Fallback, 'Montserrat' !important;
 }
+
+.avatar {
+  background-image: url('../img/avatar_background.png');
+}
