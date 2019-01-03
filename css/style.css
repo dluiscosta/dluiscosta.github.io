@@ -7,3 +7,14 @@
   image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
   -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
 }
+
+@font-face {
+  font-family: 'Pixel Art';
+  src: url('fonts/pixelart.woff2') format('woff2'),
+       url('fonts/pixelart.woff') format('woff'),
+       url('fonts/pixelart.ttf') format('truetype');
+}
+
+.pixel-art-font {
+  font-family: 'Pixel Art', Fallback, 'Montserrat' !important;
+}
