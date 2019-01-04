@@ -25,7 +25,7 @@
   }
 }
 
-.avatar {
+.avatar-idle {
   background-image: url('../img/avatar_idle_frames.png'), url('../img/avatar_background.png');
   background-position: left center, left center;
   animation: avatar-idle-animation 5s steps(2, end) infinite;
