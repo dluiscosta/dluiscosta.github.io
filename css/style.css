@@ -19,6 +19,16 @@
   font-family: 'Pixel Art', Fallback, 'Montserrat' !important;
 }
 
+@keyframes avatar-idle-animation {
+  7%, 100% {
+    background-position: -520px, left center;
+  }
+}
+
 .avatar {
-  background-image: url('../img/avatar_background.png');
+  background-image: url('../img/avatar_idle_frames.png'), url('../img/avatar_background.png');
+  background-position: left center, left center;
+  animation: avatar-idle-animation 5s steps(2, end) infinite;
+  -webkit-animation: avatar-idle-animation 5s steps(2, end) infinite;
+  animation-delay: 5s;
 }
