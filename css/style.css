@@ -32,3 +32,37 @@
   -webkit-animation: avatar-idle-animation 5s steps(2, end) infinite;
   animation-delay: 5s;
 }
+
+
+.icon-and-line {
+  display: block;
+  overflow: hidden;
+  text-align: center;
+}
+
+.icon-and-line:after,
+.icon-and-line:before {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  border-top-style: solid;
+  border-top-width: 4px;
+  border-top-color: var(--color-2);
+  content: '';
+  width: 10%;
+}
+
+.icon-and-line:before {
+  right: 0.5em;
+  margin-left: -10%;
+}
+
+.icon-and-line:after {
+  left: 0.5em;
+  margin-right: -10%;
+}
+
+.chest {
+  background-image: url('../img/chest_icon_frames.png');
+  background-position: left center;
+}
