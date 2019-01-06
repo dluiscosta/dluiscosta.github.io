@@ -73,6 +73,7 @@
 
 .icon{
   background-position: left center;
+  background-size: cover;
 }
 
 #chest.icon {
@@ -85,4 +86,8 @@
 
 #pizza.icon {
   background-image: url('../img/pizza_icon_frames.png');
+}
+
+#avataricon.icon {
+  background-image: url('../img/avatar_icon_frames.png');
 }
