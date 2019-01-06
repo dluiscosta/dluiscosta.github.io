@@ -47,9 +47,18 @@
   position: relative;
   border-top-style: solid;
   border-top-width: 4px;
-  border-top-color: var(--color-2);
   content: '';
   width: 10%;
+}
+
+.icon-and-line.light:after,
+.icon-and-line.light:before {
+  border-top-color: #FFFFFF;
+}
+
+.icon-and-line.dark:after,
+.icon-and-line.dark:before {
+  border-top-color: var(--color-2);
 }
 
 .icon-and-line:before {
@@ -62,7 +71,18 @@
   margin-right: -10%;
 }
 
-.chest {
-  background-image: url('../img/chest_icon_frames.png');
+.icon{
   background-position: left center;
+}
+
+#chest.icon {
+  background-image: url('../img/chest_icon_frames.png');
+}
+
+#star.icon {
+  background-image: url('../img/star_icon_frames.png');
+}
+
+#pizza.icon {
+  background-image: url('../img/pizza_icon_frames.png');
 }
