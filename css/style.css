@@ -114,8 +114,38 @@ h6 {
   background-image: url('../img/avatar_icon_frames.png');
 }
 
+.footer-icon {
+  background-position: left center;
+  background-size: cover;
+  width: 100%;
+  max-width: 48px;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footer-icon:hover {
+  background-position: 100% center;
+}
+
+.height-from-width {
+  margin-top: 100%;
+}
+
+.linkedin-icon {
+  background-image: url('../img/linkedin_icon_frames.png');
+}
+
+.github-icon {
+  background-image: url('../img/github_icon_frames.png');
+}
+
 .minha-foto {
   box-shadow:
   	0 0 0 4px #FFF,
     4px 4px 0 4px var(--color-3);
+}
+
+.nounderline {
+  text-decoration: none !important;
 }
