@@ -91,3 +91,9 @@
 #avataricon.icon {
   background-image: url('../img/avatar_icon_frames.png');
 }
+
+.minha-foto {
+  box-shadow:
+  	0 0 0 4px #FFF,
+    4px 4px 0 4px var(--color-3);
+}
