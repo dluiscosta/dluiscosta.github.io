@@ -1,3 +1,17 @@
+body {
+  font-family: 'Inconsolata', monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700 !important;
+  font-family: 'Inconsolata', monospace;
+}
+
 .pixel-art {
   image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
   image-rendering: -moz-crisp-edges;          /* Firefox                        */
@@ -33,6 +47,14 @@
   animation-delay: 5s;
 }
 
+.light-hr {
+  border-top: 2px solid #FFFFFF;
+  border-bottom: 2px solid #ffffff;
+  display: block;
+  position: relative;
+  width: 30%;
+  height: 0px;
+}
 
 .icon-and-line {
   display: block;

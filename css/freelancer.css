@@ -12,10 +12,12 @@
   --color-4:#022f44;
 }
 
+/*
 body {
   font-family: 'Lato';
-}
+}*/
 
+/*
 h1,
 h2,
 h3,
@@ -25,6 +27,7 @@ h6 {
   font-weight: 700;
   font-family: 'Montserrat';
 }
+*/
 
 hr.star-light,
 hr.star-dark {
@@ -192,7 +195,7 @@ header.masthead h1 {
 
 header.masthead h2 {
   font-size: 1.3rem;
-  font-family: 'Lato';
+  font-family: 'Inconsolata', monospace;
 }
 
 @media (min-width: 992px) {
