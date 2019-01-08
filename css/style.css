@@ -128,6 +128,15 @@ h6 {
   background-position: 100% center;
 }
 
+.footer-min-icon {
+  background-position: left center;
+  background-size: cover;
+  width: 100%;
+  max-width: 24px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
 .height-from-width {
   margin-top: 100%;
 }
@@ -138,6 +147,14 @@ h6 {
 
 .github-icon {
   background-image: url('../img/github_icon_frames.png');
+}
+
+.email-icon {
+  background-image: url('../img/email_icon.png')
+}
+
+.telephone-icon {
+  background-image: url('../img/telephone_icon.png')
 }
 
 .minha-foto {
