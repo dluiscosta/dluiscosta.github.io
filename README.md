@@ -4,7 +4,7 @@
 under development) personal system development portfolio for Daniel L. Costa's
 work, projects and experiments. The webpage is being made with use of HTML5, CSS3, JavaScript and the framework [Boostrap](https://getbootstrap.com/), starting up
 from the
-[freelacer template](https://startbootstrap.com/template-overviews/freelancer/).
+[freelancer template](https://startbootstrap.com/template-overviews/freelancer/).
 
 ## Copyright and License
 
