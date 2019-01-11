@@ -71,12 +71,19 @@
     </nav>
 
     <!-- Header -->
-    <header class="masthead bg-primary text-white text-center">
+    <header class="masthead bg-primary text-white text-center"> <!-- mashead is freelancer class -->
       <div class="container">
-        <img id="avatar" class="mb-5 mx-auto d-inline-block img-fluid pixel-art avatar-idle" src="img/avatar_empty.png" alt="">
+        <div class="d-inline-block w-100 mx-auto mb-3
+        avatar-background sprited-image pixel-art">
+          <div id="avatar" class="d-flex w-100 avatar-idle sprited-image pixel-art">
+            <div class="height-from-width"></div>
+          </div>
+        </div>
         <h1 class="text-uppercase mb-0 pixel-art-font mb-5">Daniel L. Costa</h1>
         <hr class="light-hr">
-        <h2 class="font-weight-light mb-0 mt-4">Computer Scientist - Junior Developer - Everlasting Student</h2>
+        <h2 class="font-weight-light mb-0 mt-4">
+          Computer Scientist - Junior Developer - Everlasting Student
+        </h2>
       </div>
     </header>
 
@@ -85,7 +92,9 @@
       <div class="container">
         <h2 class="text-center text-uppercase text-secondary mb-0 pixel-art-font">Portfolio</h2>
         <div class="icon-and-line dark mb-5 mt-4">
-          <img id="chest" class="icon img-fluid pixel-art" src="img/icon_empty.png">
+          <div id="chest" class="d-inline-block w-100 section-icon sprited-image pixel-art">
+            <div class="height-from-width"></div>
+          </div>
         </div>
         <div class="d-none row">
           <div class="col-md-6 col-lg-4">
@@ -157,7 +166,9 @@
       <div class="container">
         <h2 class="text-center text-uppercase text-white pixel-art-font">About me</h2>
         <div class="icon-and-line light mb-5 mt-4">
-          <img id="avataricon" class="icon img-fluid pixel-art" src="img/icon_empty.png">
+          <div id="avataricon" class="d-inline-block w-100 section-icon sprited-image pixel-art">
+            <div class="height-from-width"></div>
+          </div>
         </div>
         <!--
         <div class="row text-justify">
@@ -190,13 +201,15 @@
           <div class="col-md-4 mb-5 mb-lg-0 ml-auto">
             <h4 class="text-uppercase mb-4 pixel-art-font">Contact Info</h4>
             <div class="w-100">
-              <div class="email-icon footer-min-icon pixel-art d-inline-block">
+              <div class="d-inline-block w-100 footer-min-icon
+              sprited-image email-icon pixel-art">
                 <div class="height-from-width"></div>
               </div>
               dluiscosta@gmail.com
             </div>
             <div class="w-100 mt-3">
-              <div class="telephone-icon footer-min-icon pixel-art d-inline-block">
+              <div class="d-inline-block w-100 footer-min-icon
+              sprited-image telephone-icon pixel-art">
                 <div class="height-from-width"></div>
               </div>
               +55 (11) 98930-1693
@@ -206,12 +219,14 @@
             <h4 class="text-uppercase mb-4 pixel-art-font">Around the Web</h4>
             <ul class="list-inline mb-0">
               <a href="https://www.linkedin.com/in/dluiscosta/" class="nounderline" target="_blank">
-                <li class="list-inline-item linkedin-icon footer-icon pixel-art">
+                <li class="list-inline-item w-100 footer-icon
+                sprited-image linkedin-icon pixel-art">
                   <div class="height-from-width"></div>
                 </li>
               </a>
               <a href="https://github.com/dluiscosta" class="nounderline" target="_blank">
-                <li class="list-inline-item github-icon footer-icon pixel-art">
+                <li class="list-inline-item w-100 footer-icon
+                sprited-image github-icon pixel-art">
                   <div class="height-from-width"></div>
                 </li>
               </a>

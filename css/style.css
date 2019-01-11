@@ -33,28 +33,22 @@ h6 {
   font-family: 'Pixel Art', Fallback, 'Montserrat' !important;
 }
 
-@keyframes avatar-idle-animation {
-  7%, 100% {
-    background-position: -520px, left center;
-  }
+.sprited-image {
+  background-position: left center;
+  background-size: cover;
 }
 
-.avatar-idle {
-  background-image: url('../img/avatar_idle_frames.png'), url('../img/avatar_background.png');
-  background-position: left center, left center;
-  animation: avatar-idle-animation 5s steps(2, end) infinite;
-  -webkit-animation: avatar-idle-animation 5s steps(2, end) infinite;
-  animation-delay: 5s;
+/* used on a dummy child element to a w-100 div to get 1:1 aspect ratio */
+.height-from-width {
+  margin-top: 100%;
 }
 
-.light-hr {
-  border-top: 2px solid #FFFFFF;
-  border-bottom: 2px solid #ffffff;
-  display: block;
-  position: relative;
-  width: 30%;
-  height: 0px;
+.nounderline {
+  text-decoration: none !important;
 }
+
+
+/* SECTIONS */
 
 .icon-and-line {
   display: block;
@@ -65,7 +59,7 @@ h6 {
 .icon-and-line:after,
 .icon-and-line:before {
   display: inline-block;
-  vertical-align: middle;
+  margin: auto 0px;
   position: relative;
   border-top-style: solid;
   border-top-width: 4px;
@@ -93,60 +87,25 @@ h6 {
   margin-right: -10%;
 }
 
-.icon{
-  background-position: left center;
-  background-size: cover;
+.section-icon {
+  max-width: 64px;
 }
 
-#chest.icon {
+#chest.section-icon {
   background-image: url('../img/chest_icon_frames.png');
 }
 
-#star.icon {
-  background-image: url('../img/star_icon_frames.png');
-}
-
-#pizza.icon {
-  background-image: url('../img/pizza_icon_frames.png');
-}
-
-#avataricon.icon {
+#avataricon.section-icon {
   background-image: url('../img/avatar_icon_frames.png');
 }
 
-.footer-icon {
-  background-position: left center;
-  background-size: cover;
-  width: 100%;
-  max-width: 48px;
-  text-decoration: none;
-  margin-left: 10px;
-  margin-right: 10px;
-}
+/* end SECTIONS */
 
-.footer-icon:hover {
-  background-position: 100% center;
-}
+/* FOOTER */
 
 .footer-min-icon {
-  background-position: left center;
-  background-size: cover;
-  width: 100%;
   max-width: 24px;
-  text-decoration: none;
   margin-right: 10px;
-}
-
-.height-from-width {
-  margin-top: 100%;
-}
-
-.linkedin-icon {
-  background-image: url('../img/linkedin_icon_frames.png');
-}
-
-.github-icon {
-  background-image: url('../img/github_icon_frames.png');
 }
 
 .email-icon {
@@ -157,12 +116,65 @@ h6 {
   background-image: url('../img/telephone_icon.png')
 }
 
+.footer-icon {
+  max-width: 48px;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footer-icon:hover, .footer-icon:active {
+  background-position: 100% center;
+}
+
+.linkedin-icon {
+  background-image: url('../img/linkedin_icon_frames.png');
+}
+
+.github-icon {
+  background-image: url('../img/github_icon_frames.png');
+}
+
+/* end FOOTER */
+
+/* HEADER */
+
+.avatar-background {
+  max-width: 260px;
+  background-image: url('../img/avatar_background.png');
+}
+
+#avatar {
+  background-image: url('../img/avatar_idle_frames.png');
+}
+
+@keyframes avatar-idle-animation {
+  7%, 100% {
+    background-position: -520px, left center;
+  }
+}
+
+.avatar-idle {
+  background-position: left center;
+  animation: avatar-idle-animation 5s steps(2, end) infinite;
+  -webkit-animation: avatar-idle-animation 5s steps(2, end) infinite;
+  animation-delay: 5s;
+}
+
+.light-hr {
+  border-top: 2px solid #FFFFFF;
+  border-bottom: 2px solid #ffffff;
+  display: block;
+  position: relative;
+  width: 30%;
+  height: 0px;
+}
+
+/* end HEADER */
+
+
 .minha-foto {
   box-shadow:
   	0 0 0 4px #FFF,
     4px 4px 0 4px var(--color-3);
-}
-
-.nounderline {
-  text-decoration: none !important;
 }
