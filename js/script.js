@@ -11,6 +11,10 @@ function hyphenate_titles() {
         var hifen = document.createTextNode(" - ");
         my_titles_ul.insertBefore(hifen, my_titles_lis[i]);
         i += 1;
+<<<<<<< HEAD
+=======
+        console.log(previous_title, current_title);
+>>>>>>> b66d0588819d1291c616e4af7e8f5ee6c9bd637a
 
         // Check if the inserted hyphen has created a line break
         var current_title = my_titles_lis[i].getBoundingClientRect();
