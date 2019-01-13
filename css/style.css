@@ -54,15 +54,17 @@ h6 {
   display: block;
   overflow: hidden;
   text-align: center;
+  vertical-align: middle;
 }
 
 .icon-and-line:after,
 .icon-and-line:before {
   display: inline-block;
-  margin: auto 0px;
+  vertical-align: middle;
   position: relative;
   border-top-style: solid;
   border-top-width: 4px;
+  padding-top: 1px;
   content: '';
   width: 10%;
 }
@@ -89,6 +91,7 @@ h6 {
 
 .section-icon {
   max-width: 64px;
+  vertical-align: middle;
 }
 
 #chest.section-icon {
@@ -99,6 +102,12 @@ h6 {
   background-image: url('../img/avatar_icon_frames.png');
 }
 
+.minha-foto {
+  box-shadow:
+  	0 0 0 4px #FFF,
+    4px 4px 0 4px var(--color-3);
+}
+
 /* end SECTIONS */
 
 /* FOOTER */
@@ -106,6 +115,7 @@ h6 {
 .footer-min-icon {
   max-width: 24px;
   margin-right: 10px;
+  vertical-align: middle;
 }
 
 .email-icon {
@@ -171,10 +181,3 @@ h6 {
 }
 
 /* end HEADER */
-
-
-.minha-foto {
-  box-shadow:
-  	0 0 0 4px #FFF,
-    4px 4px 0 4px var(--color-3);
-}
