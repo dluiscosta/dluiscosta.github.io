@@ -47,6 +47,50 @@ h6 {
   text-decoration: none !important;
 }
 
+/* HEADER */
+
+.avatar-background {
+  max-width: 260px;
+  background-image: url('../img/avatar_background.png');
+}
+
+#avatar {
+  background-image: url('../img/avatar_idle_frames.png');
+}
+
+@keyframes avatar-idle-animation {
+  7%, 100% {
+    background-position: -520px, left center;
+  }
+}
+
+.avatar-idle {
+  background-position: left center;
+  animation: avatar-idle-animation 5s steps(2, end) infinite;
+  -webkit-animation: avatar-idle-animation 5s steps(2, end) infinite;
+  animation-delay: 5s;
+}
+
+.light-hr {
+  border-top: 2px solid #FFFFFF;
+  border-bottom: 2px solid #ffffff;
+  display: block;
+  position: relative;
+  width: 30%;
+  height: 0px;
+}
+
+#my-titles {
+    margin: 0;
+    padding: 0;
+}
+
+.my-title {
+  white-space: nowrap;
+  display: inline;
+}
+
+/* end HEADER */
 
 /* SECTIONS */
 
@@ -146,38 +190,3 @@ h6 {
 }
 
 /* end FOOTER */
-
-/* HEADER */
-
-.avatar-background {
-  max-width: 260px;
-  background-image: url('../img/avatar_background.png');
-}
-
-#avatar {
-  background-image: url('../img/avatar_idle_frames.png');
-}
-
-@keyframes avatar-idle-animation {
-  7%, 100% {
-    background-position: -520px, left center;
-  }
-}
-
-.avatar-idle {
-  background-position: left center;
-  animation: avatar-idle-animation 5s steps(2, end) infinite;
-  -webkit-animation: avatar-idle-animation 5s steps(2, end) infinite;
-  animation-delay: 5s;
-}
-
-.light-hr {
-  border-top: 2px solid #FFFFFF;
-  border-bottom: 2px solid #ffffff;
-  display: block;
-  position: relative;
-  width: 30%;
-  height: 0px;
-}
-
-/* end HEADER */
