@@ -219,6 +219,7 @@ header.masthead h2 {
 .portfolio .portfolio-item {
   position: relative;
   display: block;
+  width: 100%;
   max-width: 25rem;
   margin-bottom: 15px;
 }

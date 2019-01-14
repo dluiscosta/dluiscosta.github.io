@@ -43,6 +43,12 @@ h6 {
   margin-top: 100%;
 }
 
+/* used on a dummy child element to a w-100 div to get 7:10 aspect ratio */
+.height-from-width70 {
+  margin-top: 70%;
+}
+
+
 .nounderline {
   text-decoration: none !important;
 }
@@ -152,6 +158,10 @@ h6 {
   background-image: url('../img/avatar_icon_frames.png');
 }
 
+/* end SECTIONS */
+
+/* ABOUT ME */
+
 .minha-foto {
   box-shadow:
   	0 0 0 4px #FFF,
@@ -174,8 +184,72 @@ h6 {
   margin-left: 0;
 }
 
+/* end ABOUT ME */
 
-/* end SECTIONS */
+/* PORTFOLIO */
+
+.portfolio-item-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.portfolio-item-space {
+  flex: 5;
+}
+
+.portfolio-item-technologies {
+  flex: 2;
+  background-color: rgba(3, 58, 84, 0.4);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  position: relative;
+}
+
+.portfolio-item-technologies li {
+  display: inline-block;
+
+  border-radius: 1rem;
+  padding: 0.6rem;
+  height: 2rem;
+
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-left: .6rem;
+  
+  font-weight: bold;
+  color: white;
+}
+
+.portfolio-item-technologies li p {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.portfolio-item-description {
+  flex: 3;
+  background-color: rgba(3, 58, 84, 0.8);
+  color: white;
+}
+
+.portfolio-item-description p {
+  margin: .6rem 1rem;
+}
+
+.technology-python {
+  background-color: darkgreen;
+}
+
+.technology-js {
+  background-color: orange;
+}
+
+/* end PORTFOLIO */
 
 /* FOOTER */
 
