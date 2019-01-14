@@ -198,6 +198,12 @@ h6 {
   flex: 5;
 }
 
+.portfolio-item-space i.mg {
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  opacity: 0;
+}
+
 .portfolio-item-technologies {
   flex: 2;
   background-color: rgba(3, 58, 84, 0.4);
@@ -206,6 +212,7 @@ h6 {
   list-style: none;
   display: flex;
   position: relative;
+  padding-left: 0.4rem;
 }
 
 .portfolio-item-technologies li {
@@ -219,7 +226,7 @@ h6 {
   top: 50%;
   transform: translate(0, -50%);
   margin-left: .6rem;
-  
+
   font-weight: bold;
   color: white;
 }
@@ -239,6 +246,27 @@ h6 {
 
 .portfolio-item-description p {
   margin: .6rem 1rem;
+}
+
+.portfolio-item-space,
+.portfolio-item-technologies,
+.portfolio-item-description {
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.portfolio-item:hover .portfolio-item-space,
+.portfolio-item:hover .portfolio-item-technologies,
+.portfolio-item:hover .portfolio-item-description {
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  background-color: rgba(3, 58, 84, 0.9);
+}
+
+.portfolio-item:hover .portfolio-item-space i.mg {
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  opacity: 1;
 }
 
 .technology-python {
