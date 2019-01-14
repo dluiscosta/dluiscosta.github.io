@@ -47,6 +47,11 @@ h6 {
   text-decoration: none !important;
 }
 
+.bg-primary a {
+  color: white;
+  text-decoration: underline;
+}
+
 /* HEADER */
 
 .avatar-background {
@@ -152,6 +157,23 @@ h6 {
   	0 0 0 4px #FFF,
     4px 4px 0 4px var(--color-3);
 }
+
+.list-about-me {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+   .list-about-me {
+      text-align: center;
+    }
+ }
+
+.list-about-me li {
+  margin-left: 0;
+}
+
 
 /* end SECTIONS */
 
