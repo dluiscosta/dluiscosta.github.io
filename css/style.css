@@ -188,6 +188,10 @@ h6 {
 
 /* PORTFOLIO */
 
+.portfolio-item {
+    border: solid 1px var(--color-2);
+}
+
 .portfolio-item-overlay {
   display: flex;
   flex-direction: column;
@@ -219,6 +223,8 @@ h6 {
   display: inline-block;
 
   border-radius: 1rem;
+  border: 2px solid;
+
   padding: 0.6rem;
   height: 2rem;
 
@@ -229,6 +235,8 @@ h6 {
 
   font-weight: bold;
   color: white;
+  background-color: var(--color-2);
+  border-color: var(--color-4);
 }
 
 .portfolio-item-technologies li p {
@@ -236,11 +244,13 @@ h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .portfolio-item-description {
   flex: 3;
-  background-color: rgba(3, 58, 84, 0.8);
+  background-color: rgba(3, 58, 84, 0.9);
   color: white;
 }
 
@@ -269,13 +279,26 @@ h6 {
   opacity: 1;
 }
 
-.technology-python {
-  background-color: darkgreen;
-}
+/* Color for technologies */
+.portfolio-item-technologies .technology-python {
+  background-color: #3572A5; border-color: #2d608a;}
+.portfolio-item-technologies .technology-js {
+  background-color: #d6c751; border-color: #9e933e;}
+.portfolio-item-technologies .technology-html {
+  background-color: #e34c26; border-color: #c94422;}
+.portfolio-item-technologies .technology-css {
+  background-color: #563d7c; border-color: #443061;}
+.portfolio-item-technologies .technology-bootstrap {
+  background-color: #563d7c; border-color: #443061;}
+.portfolio-item-technologies .technology-opencv {
+  background-color: #03c700; border-color:#039900;}
+.portfolio-item-technologies .technology-latex {
+  background-color: #008080; border-color:#006666;}
+.portfolio-item-technologies .technology-scikit-learn {
+  background-color: #de8c2f; border-color:#b37227;}
+.portfolio-item-technologies .technology-matplotlib {
+  background-color: #20557c; border-color:#194361;}
 
-.technology-js {
-  background-color: orange;
-}
 
 /* end PORTFOLIO */
 
