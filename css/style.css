@@ -194,12 +194,12 @@ h6 {
 
 .portfolio-item-overlay {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: stretch;
 }
 
 .portfolio-item-space {
-  flex: 5;
+  flex: 1;
 }
 
 .portfolio-item-space i.mg {
@@ -209,14 +209,15 @@ h6 {
 }
 
 .portfolio-item-technologies {
-  flex: 2;
   background-color: rgba(3, 58, 84, 0.4);
   padding: 0;
   margin: 0;
   list-style: none;
   display: flex;
-  position: relative;
-  padding-left: 0.4rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 0.6rem 0.6rem 0 0.6rem;
 }
 
 .portfolio-item-technologies li {
@@ -225,13 +226,10 @@ h6 {
   border-radius: 1rem;
   border: 2px solid;
 
+  margin-bottom: 0.6rem;
+  margin-left: 0.4rem;
   padding: 0.6rem;
   height: 2rem;
-
-  position: relative;
-  top: 50%;
-  transform: translate(0, -50%);
-  margin-left: .6rem;
 
   font-weight: bold;
   color: white;
@@ -249,13 +247,17 @@ h6 {
 }
 
 .portfolio-item-description {
-  flex: 3;
   background-color: rgba(3, 58, 84, 0.9);
   color: white;
 }
 
 .portfolio-item-description p {
   margin: .6rem 1rem;
+}
+
+.portfolio-item-description p.portfolio-item-more {
+  text-align: right;
+  font-size: small;
 }
 
 .portfolio-item-space,
@@ -278,6 +280,11 @@ h6 {
   transition: all ease 0.5s;
   opacity: 1;
 }
+
+.portfolio-item:hover p.portfolio-item-more {
+  text-decoration: underline;
+}
+
 
 /* Color for technologies */
 .portfolio-item-technologies .technology-python {
