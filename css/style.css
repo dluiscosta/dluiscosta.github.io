@@ -146,8 +146,16 @@ h6 {
 }
 
 .section-icon {
-  max-width: 64px;
   vertical-align: middle;
+  font-size: 2.5rem;
+}
+
+.bg-primary .section-icon {
+  color: white;
+}
+
+.bg-light .section-icon {
+  color: var(--color-2);
 }
 
 #chest.section-icon {
@@ -311,10 +319,11 @@ h6 {
 
 /* FOOTER */
 
+
 .footer-min-icon {
-  max-width: 24px;
-  margin-right: 10px;
   vertical-align: middle;
+  font-size: 1.5rem;
+  margin-right: .5rem;
 }
 
 .email-icon {
