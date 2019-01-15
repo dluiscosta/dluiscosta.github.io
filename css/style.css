@@ -335,7 +335,9 @@ h6 {
 }
 
 .footer-icon {
-  max-width: 48px;
+  width: 3rem;
+  height: 3rem;
+  background-size: cover;
   text-decoration: none;
   margin-left: 10px;
   margin-right: 10px;
@@ -346,11 +348,11 @@ h6 {
 }
 
 .linkedin-icon {
-  background-image: url('../img/linkedin_icon_frames.png');
+  background-image: url('../img/linkedin_icon.png');
 }
 
 .github-icon {
-  background-image: url('../img/github_icon_frames.png');
+  background-image: url('../img/github_icon.png');
 }
 
 /* end FOOTER */
