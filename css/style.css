@@ -332,7 +332,16 @@ h6 {
 }
 
 .portfolio-modal-text {
+  text-align: center;
+}
+
+.portfolio-modal-text p {
   text-align: justify;
+}
+
+.portfolio-modal-text a{
+  color: inherit;
+  text-decoration: underline;
 }
 
 .portfolio-modal-text img{
@@ -341,16 +350,18 @@ h6 {
 }
 
 .portfolio-modal-text img.image-full {
-    width: 100%;
-    margin: 1rem 0% 2rem 0%;
+    max-width: 100%;
+    margin: 1rem auto 2rem auto;
 }
 
 .portfolio-modal-text img.image-side {
-    width: 40%;
+    max-width: 40%;
     float: left;
-    margin-right: 2rem;
-    margin-bottom: 1rem;
-    margin-top: 0.4rem;
+    margin: 0.4rem 1.5rem 1rem 0rem;
+}
+
+.portfolio-modal-text img.noborder {
+  border-width: 0px !important;
 }
 
 p.portfolio-modal-long-title {
