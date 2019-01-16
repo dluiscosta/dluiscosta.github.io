@@ -10,7 +10,7 @@
     <meta name="keywords" content="daniel l. costa, daniel luis costa, daniel costa,portfolio,development,programming,junior,software">
     <meta name="robots" content="index,follow"/>
     <meta http-equiv="content-language" content="en" />
-
+    <base target="_blank">
     <title>Daniel L. Costa's Portfolio</title>
 
     <!-- Bootstrap core CSS -->
@@ -104,7 +104,7 @@
           <div class="row">
             <div class="col-xs-12 col-lg-6 px-2">
               <a class="portfolio-item d-block mx-auto"
-              href="#portfolio-modal-1">
+              href="#portfolio-modal-tcc">
                 <div class="portfolio-item-overlay
                  position-absolute h-100 w-100">
                   <div class="portfolio-item-description">
@@ -123,7 +123,7 @@
                     <i class="fas fa-search-plus fa-5x my-auto mx-auto mg"></i>
                   </div>
                 </div>
-                <img class="img-fluid" src="img/portfolio/portfolio-item-tcc.jpg"
+                <img class="img-fluid" src="img/portfolio/tcc/cover.jpg"
                  alt="A slice with blood cells shown trough a microscope
                  lens. Some white blood cells are circled, with different colors
                  for neutrophils, lymphocytes and monocytes.">
@@ -160,7 +160,7 @@
       <!-- Portfolio Modals -->
 
       <!-- Portfolio Modal 1 -->
-      <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
+      <div class="portfolio-modal mfp-hide" id="portfolio-modal-tcc">
         <div class="portfolio-modal-dialog bg-white">
           <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
             <i class="fa fa-3x fa-times"></i>
@@ -168,11 +168,52 @@
           <div class="container text-center">
             <div class="row">
               <div class="col-lg-8 mx-auto">
-                <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="img/portfolio/cabin.png" alt="">
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <h2 class="text-secondary text-uppercase mb-0">
+                  Automatic Count of Leucocytes
+                </h2>
+                <div class="icon-and-line dark mb-5 mt-4">
+                  <div id="chest" class="d-inline-block w-100 section-icon
+                  sprited-image pixel-art">
+                    <div class="height-from-width"></div>
+                  </div>
+                </div>
+                <div class="portfolio-modal-image mb-4">
+                  <div class="dummy"></div>
+                  <!-- Will show only the upper half of the image -->
+                  <img src="img/portfolio/tcc/cover.jpg"
+                  alt="A slice with blood cells shown trough a microscope
+                  lens. Some white blood cells are circled, with different colors
+                  for neutrophils, lymphocytes and monocytes."
+                  class="image-cover">
+                </div>
+                <p class="portfolio-modal-long-title mb-5">
+                  Automatic differential count of leucocytes in microscopic images.
+                </p>
+                <div class="portfolio-modal-text" onresize="float_small_images()">
+                  <p>This project was the subject of my <a href="files/tcc.pdf">computer science graduation's final paper</a>. Mainly, it was a work in <strong>computer vision</strong> and <strong>machine learning</strong>, but it also involved biomedicine, visual interface prototyping and a lot of scientific reading and writing.</p>
+                  <p>My goal was to automate a biomedical process: the counting of leucocytes (white blood cells). This count is very important for the diagnosis of diseases, ranging from allergies to HIV. The&nbsp;project originated from the concrete need of a colleague, who was studying for a master&rsquo;s in pharmacology. She strived daily with this process, which she did manually for her research: she literally sat at the microscope and counted the cells, one by one, on multiple slide positions to get a broader sample.&nbsp;This manual approach is slow, tiresome, prone to error and bias. For that reason, it ought for an alternative, and we applied tech to conceive one.</p>
+                  <p>At first, for a few months, a deep research of the existing scientific literature on the topic was made. Turned out that there was a<em> lot </em>of existing work on automating cell counting processes, even by means of the processing of microscopic images, but they ranged through many types of cells, different types of samples (i.e. blood, tissue) or were simply too generic. No clean-cut recipe that fit our needs was available, and it was so that I had to adapt and experiment.</p>
+                  <p>The general framework and methodology, though, could be drawn from the literature, as there was reasonable consensus: first, the image needs to be <strong>preprocessed</strong> for noise removal; then, it needs to be <strong>segmented</strong>, separating the regions of interest (potential cells) for further analysis; finally, for each segmented region, a set of descriptive <strong>features</strong> <strong>is extracted</strong> and fed to a <strong>classifier</strong>, which determines if it&rsquo;s a cell or not (and which cell, being our count differential).</p>
+                  <img src="img/portfolio/tcc/4steps.jpg" class="image-full noborder">
+                  <p>Defined the 4 steps shown above, they act as slots for a variety of algorithms. To choose which algorithms would compose the pipeline of my final proposed method, I first intuitively selected a few from the scientific literature. Then, I continued the selection empirically, so I could pick the options that best served my specific domain (the leucocytes at my colleague&rsquo;s research).</p>
+                  <p>For that, a set of 100+ microscopic images was first taken, at her laboratory. Then, I (with the help of the specialist) made multiple sorts of <strong>annotations</strong>, like number of cells in an image, ideal segmentation and correct class (classifier output) provided a region. Those acted as <strong>ground truth</strong> for the choosing and parametrization of the algorithms, alongside <strong>accuracy metrics</strong> drawn from the literature.</p>
+                  <p>It was just then, half-way through the final year, that the coding started. But not before I learned <strong><a href="https://www.python.org/">Python</a></strong> from scratch. Because of its script-like structure, the language seemed adequate for the execution of the experiments. In fact, once I learned my way around, the simplicity and high level of abstraction were very welcome during the process of <strong>exploring the data</strong>. With <strong><a href="https://matplotlib.org/">matplotlib</a></strong>, I could both easily visualize my results and generate presentable graphs for the paper.</p>
+                  <img src="img/portfolio/tcc/lim_canais.jpg" class="image-full noborder">
+                  <p>This graph shows the results for an exaustive test that I ran. Each line represents either a RGB color channel or the grayscale, and shows the average performance achieved by segmenting the image through a fixed threshold, using the Jaccard index as metric. It was because of this plot that I observed how the green RGB channel had more correlation with the problem at hand.</p>
+                  <p>For manipulating the images, I used <strong><a href="https://opencv.org/">OpenCV</a></strong>, an open-source library with algorithms on computer vision. OpenCV was not just a facilitator, but rather necessary. Navigating through pixels in an interpreted language like Python, as I sadly discovered, showed to be quite computationally consuming. In contrast, OpenCV is written in C/C++ and can make use of the GPU.</p>
+                  <p>That said, not all needed algorithms were available in OpenCV. This was the case of the limiarization by minimization of the fuzzy divergence, for example, an algorithm that I tested for the segmentation step. For this algorithm and others, I had to build them up from the OpenCV basic operations, which required me to get a good grasp of the library.</p>
+                  <p>For the classification step, I ended up using a <strong>support vector machine</strong> (SVM). The <strong><a href="https://scikit-learn.org/">scikit-learn</a></strong> library provided me not only with that algorithm&rsquo;s implementation but also with implementation for <strong>k-fold</strong> <strong>crossed validation</strong>, <strong>linear discriminant analysis</strong> (LDA) for the selection of the most relevant features and the <strong>ROC curve</strong> to show the output of the SVM.</p>
+                  <img src="img/portfolio/tcc/roc_neut.jpeg" class="image-full noborder">
+                  <p>The results obtained can be seen on the ROC curve above, representing a binary SVM that individually recognize neutrophils, a type of leukocyte. Even though the accuracy rate was quite high (92 on average), the experiment that led to those results was executed over ideally segmented regions. Those, unfortunately, were not close to being automatically generated, having the segmentation step not faired so well as the classification.</p>
+                  <p>As an aftermath, the whole proposed method (from image to final count) did not reach good enough results that would justify the proper creation of an application. Despite that, the project served not only to make me venture into many previously unknown fields (and thus learn new things), but also to raise some questions and ideas for further work on the subject, which were included in the paper.</p>
+                  <p>Additionally, my human-machine interaction teacher prompted me to apply the <strong>UX</strong> concepts learned at his class on the <strong>prototyping</strong> of a <strong>graphic interface</strong> for this project. Or rather, a mobile application with objective to capture images through the microscope and display the cell counting results. For that, I used <strong><a href="https://pingendo.com/">Pingendo</a></strong>, a graphical environment for design and development with <strong>HTML</strong> that uses <strong><a href="https://getbootstrap.com/">Bootstrap</a></strong>.</p>
+                  <p>Once the experiments were concluded and, with the results, the final method (algorithms and its optimal parameters) was determined, started a <em>long</em> period of writing. This process can be daunting, even more for a beginner. To help me keep track of the many references, technical terms, sections and chapters, I had to resort to <strong><a href="https://www.latex-project.org/">LaTeX</a></strong>, which also helped me to comply with the writing standards required by my college (someone, to who I am very grateful, had built a template).</p>
+                  <p>As instructed by my mentor, a scientific paper must be extensively revised so there are no errors left and the result is coherent, self-contained and non-redundant. For that to be accomplished, a lot of effort is necessary, but in turn one also conquers a sort of hard-won fluency on the subject.</p>
+                  <p>I did that, and, when the final <strong>presentation</strong> day came, I could speak with ease about all the subjects touched by my work. I received an A, both for the presentation and for the paper.</p>
+                  <p>Later, my project was invited to be presented at <strong>InovaFEI</strong>, a congress on innovation. There, it was judged on its social impact and relevance. Also, my ability to explain the project to people of other fields was taken into account. In the end, my project was awarded with first place in computer science.</p>
+                  <p>All the code, images and annotations are available at a <a href="https://github.com/dluiscosta/tcc">GitHub repository</a>. The paper (which was written in portuguese) can also be download <a href="files/tcc.pdf">here</a>.</p>
+                </div>
+                <a class="mt-5 btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>
                   Close Project</a>
               </div>

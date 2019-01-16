@@ -314,6 +314,67 @@ h6 {
 .portfolio-item-technologies .technology-matplotlib {
   background-color: #20557c; border-color:#194361;}
 
+.portfolio-modal-long-title {
+  font-style: italic;
+}
+
+.portfolio-modal-image {
+  border: solid 1px var(--color-2);
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-modal-image .dummy {
+  margin-top: 36%;
+}
+
+.portfolio-modal-image img.image-cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.portfolio-modal-text {
+  text-align: center;
+}
+
+.portfolio-modal-text p {
+  text-align: justify;
+}
+
+.portfolio-modal-text a{
+  color: inherit;
+  text-decoration: underline;
+}
+
+.portfolio-modal-text img{
+  border: solid 1px var(--color-2);
+  height: auto;
+}
+
+.portfolio-modal-text img.image-full {
+    max-width: 100%;
+    margin: 1rem auto 2rem auto;
+}
+
+.portfolio-modal-text img.image-side {
+    max-width: 40%;
+    float: left;
+    margin: 0.4rem 1.5rem 1rem 0rem;
+}
+
+.portfolio-modal-text img.noborder {
+  border-width: 0px !important;
+}
+
+p.portfolio-modal-long-title {
+  text-align: center;
+}
 
 /* end PORTFOLIO */
 
