@@ -146,8 +146,16 @@ h6 {
 }
 
 .section-icon {
-  max-width: 64px;
   vertical-align: middle;
+  font-size: 2.5rem;
+}
+
+.bg-primary .section-icon {
+  color: white;
+}
+
+.bg-light .section-icon {
+  color: var(--color-2);
 }
 
 #chest.section-icon {
@@ -372,10 +380,11 @@ p.portfolio-modal-long-title {
 
 /* FOOTER */
 
+
 .footer-min-icon {
-  max-width: 24px;
-  margin-right: 10px;
   vertical-align: middle;
+  font-size: 1.5rem;
+  margin-right: .5rem;
 }
 
 .email-icon {
@@ -387,7 +396,9 @@ p.portfolio-modal-long-title {
 }
 
 .footer-icon {
-  max-width: 48px;
+  width: 3rem;
+  height: 3rem;
+  background-size: cover;
   text-decoration: none;
   margin-left: 10px;
   margin-right: 10px;
@@ -398,11 +409,11 @@ p.portfolio-modal-long-title {
 }
 
 .linkedin-icon {
-  background-image: url('../img/linkedin_icon_frames.png');
+  background-image: url('../img/linkedin_icon.png');
 }
 
 .github-icon {
-  background-image: url('../img/github_icon_frames.png');
+  background-image: url('../img/github_icon.png');
 }
 
 /* end FOOTER */
