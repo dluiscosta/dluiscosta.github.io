@@ -322,13 +322,39 @@ h6 {
   margin-top: 36%;
 }
 
-.portfolio-modal-image img {
+.portfolio-modal-image img.image-cover {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
+}
+
+.portfolio-modal-text {
+  text-align: justify;
+}
+
+.portfolio-modal-text img{
+  border: solid 1px var(--color-2);
+  height: auto;
+}
+
+.portfolio-modal-text img.image-full {
+    width: 100%;
+    margin: 1rem 0% 2rem 0%;
+}
+
+.portfolio-modal-text img.image-side {
+    width: 40%;
+    float: left;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 0.4rem;
+}
+
+p.portfolio-modal-long-title {
+  text-align: center;
 }
 
 /* end PORTFOLIO */

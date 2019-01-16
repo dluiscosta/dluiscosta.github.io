@@ -126,7 +126,7 @@
                     <i class="fas fa-search-plus fa-5x my-auto mx-auto mg"></i>
                   </div>
                 </div>
-                <img class="img-fluid" src="img/portfolio/portfolio-item-tcc.jpg"
+                <img class="img-fluid" src="img/portfolio/tcc/cover.jpg"
                  alt="A slice with blood cells shown trough a microscope
                  lens. Some white blood cells are circled, with different colors
                  for neutrophils, lymphocytes and monocytes.">
@@ -182,26 +182,40 @@
                 </div>
                 <div class="portfolio-modal-image mb-4">
                   <div class="dummy"></div>
-                  <img src="img/portfolio/portfolio-item-tcc.jpg"
+                  <!-- Will show only the upper half of the image -->
+                  <img src="img/portfolio/tcc/cover.jpg"
                   alt="A slice with blood cells shown trough a microscope
                   lens. Some white blood cells are circled, with different colors
-                  for neutrophils, lymphocytes and monocytes.">
+                  for neutrophils, lymphocytes and monocytes."
+                  class="image-cover">
                 </div>
                 <p class="portfolio-modal-long-title mb-3">
                   Automatic differential count of leucocytes in microscopic images.
                 </p>
-                <p>
-                  This project was the subject of my computer science graduation's
-                  final paper. Mainly, it was a work in <em>computer vision</em> and
-                  <em>machine learning</em>, but it also involved biomedicine, 
-                  visual interface prototipation and scientific writing.
-                <p>
-                    Este projeto foi o TCC da minha graduação em ciência da computação. Foi principalmente um trabalho em visão computacional e machine learning, mas também envolveu biomedicina, prototipação de interface e muita leitura e escrita científica.
-Nós (eu e minha dupla, Nayara Gerolomo) trabalhamos com a automação de um processo biomédico: a contagem de leucócitos (glóbulos brancos). Essa contagem é importante para o diagnóstico de várias doenças, desde alergias a HIV.
-Nosso trabalho se originou da necessidade de uma colega, mestranda em farmacologia. Ela trouxe a nós a dificuldade que estava tendo em ter de executar manualmente esse processo para os experimentos da sua tese. Trabalhamos em direção de conceber uma solução tecnológica que pudesse auxiliá-la.
-Por conta disso, nosso trabalho abordou a contagem dos leucócitos específicos que eram relevantes na sua pesquisa. A literatura internacional recente já provia trabalhos sobre o assunto, mas mais genéricos. Para o nosso caso, tivemos que adaptá-los e experimentar.
-Para esse projeto, eu aprendi Python do início. Pela sua estrutura de script, a linguagem pareceu adequada para a execução dos experimentos. De fato, assim que eu peguei o jeito, sua simplicidade e alta abstração facilitaram muito o processo de exploração dos dados.
-                </p>
+                <div class="portfolio-modal-text" onresize="float_small_images()">
+                  <p>
+                    This project was the subject of my computer science graduation's
+                    final paper. Mainly, it was a work in <em>computer vision</em> and
+                    <em>machine learning</em>, but it also involved biomedicine,
+                    visual interface prototipation and scientific writing.
+                  </p>
+                  <img class="image-full" src="img/portfolio/tcc/cover.jpg">
+                  <p>
+                      Este projeto foi o TCC da minha graduação em ciência da computação. Foi principalmente um trabalho em visão computacional e machine learning, mas também envolveu biomedicina, prototipação de interface e muita leitura e escrita científica.
+  Nós (eu e minha dupla, Nayara Gerolomo) trabalhamos com a automação de um processo biomédico: a contagem de leucócitos (glóbulos brancos). Essa contagem é importante para o diagnóstico de várias doenças, desde alergias a HIV.
+  Nosso trabalho se originou da necessidade de uma colega, mestranda em farmacologia. Ela trouxe a nós a dificuldade que estava tendo em ter de executar manualmente esse processo para os experimentos da sua tese. Trabalhamos em direção de conceber uma solução tecnológica que pudesse auxiliá-la.
+  Por conta disso, nosso trabalho abordou a contagem dos leucócitos específicos que eram relevantes na sua pesquisa. A literatura internacional recente já provia trabalhos sobre o assunto, mas mais genéricos. Para o nosso caso, tivemos que adaptá-los e experimentar.
+  Para esse projeto, eu aprendi Python do início. Pela sua estrutura de script, a linguagem pareceu adequada para a execução dos experimentos. De fato, assim que eu peguei o jeito, sua simplicidade e alta abstração facilitaram muito o processo de exploração dos dados.
+                  </p>
+                  <img class="image-side" src="img/portfolio/tcc/cover.jpg">
+                  <p>
+                      Este projeto foi o TCC da minha graduação em ciência da computação. Foi principalmente um trabalho em visão computacional e machine learning, mas também envolveu biomedicina, prototipação de interface e muita leitura e escrita científica.
+  Nós (eu e minha dupla, Nayara Gerolomo) trabalhamos com a automação de um processo biomédico: a contagem de leucócitos (glóbulos brancos). Essa contagem é importante para o diagnóstico de várias doenças, desde alergias a HIV.
+  Nosso trabalho se originou da necessidade de uma colega, mestranda em farmacologia. Ela trouxe a nós a dificuldade que estava tendo em ter de executar manualmente esse processo para os experimentos da sua tese. Trabalhamos em direção de conceber uma solução tecnológica que pudesse auxiliá-la.
+  Por conta disso, nosso trabalho abordou a contagem dos leucócitos específicos que eram relevantes na sua pesquisa. A literatura internacional recente já provia trabalhos sobre o assunto, mas mais genéricos. Para o nosso caso, tivemos que adaptá-los e experimentar.
+  Para esse projeto, eu aprendi Python do início. Pela sua estrutura de script, a linguagem pareceu adequada para a execução dos experimentos. De fato, assim que eu peguei o jeito, sua simplicidade e alta abstração facilitaram muito o processo de exploração dos dados.
+                  </p>
+                </div>
                 <a class="mt-5 btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>
                   Close Project</a>
@@ -366,7 +380,7 @@ Para esse projeto, eu aprendi Python do início. Pela sua estrutura de script, a
     <script src="js/freelancer.min.js"></script>
 
     <!-- My custom scripts -->
-    <script src="js/script.min.js"></script>
+    <script src="js/script.js"></script>
 
   </body>
 
