@@ -180,7 +180,9 @@ h1, h2, h3, h4 {
 /* PORTFOLIO */
 
 .portfolio-item {
-    border: solid 1px var(--color-2);
+    box-shadow:
+    	0 0 0 4px #1d4152,
+      4px 4px 0 4px #afc2cb;
 }
 
 .portfolio-item-overlay {
