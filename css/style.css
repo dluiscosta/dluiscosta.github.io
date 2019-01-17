@@ -1,36 +1,18 @@
 body {
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Open Sans', sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700 !important;
-  font-family: 'Inconsolata', monospace;
+h1, h2, h3, h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 }
 
-.pixel-art {
-  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
-  image-rendering: -moz-crisp-edges;          /* Firefox                        */
-  image-rendering: -o-crisp-edges;            /* Opera                          */
-  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
-  image-rendering: pixelated; /* Chrome */
-  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
-  -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+.bg-primary {
+  color: white;
 }
 
-@font-face {
-  font-family: 'Pixel Art';
-  src: url('fonts/pixelart.woff2') format('woff2'),
-       url('fonts/pixelart.woff') format('woff'),
-       url('fonts/pixelart.ttf') format('truetype');
-}
-
-.pixel-art-font {
-  font-family: 'Pixel Art', Fallback, 'Montserrat' !important;
+.bg-light {
+  color: #526066;
 }
 
 .sprited-image {
@@ -174,6 +156,7 @@ h6 {
   box-shadow:
   	0 0 0 4px #FFF,
     4px 4px 0 4px var(--color-3);
+  margin-top: 6px;
 }
 
 .list-about-me {
@@ -314,6 +297,10 @@ h6 {
 .portfolio-item-technologies .technology-matplotlib {
   background-color: #20557c; border-color:#194361;}
 
+.portfolio-modal h2 {
+  font-weight: bold;
+}
+
 .portfolio-modal-long-title {
   font-style: italic;
 }
@@ -344,12 +331,19 @@ h6 {
 }
 
 .portfolio-modal-text p {
-  text-align: justify;
+  text-align: left;
 }
 
-.portfolio-modal-text a{
+.portfolio-modal-text a, .portfolio-modal-text a:link, .portfolio-modal-text a:active{
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.portfolio-modal-text a:hover, .portfolio-modal-text a:active{
   color: inherit;
   text-decoration: underline;
+
 }
 
 .portfolio-modal-text img{
