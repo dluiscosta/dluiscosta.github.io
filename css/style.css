@@ -42,27 +42,17 @@ h1, h2, h3, h4 {
 
 /* HEADER */
 
-.avatar-background {
-  max-width: 260px;
-  background-image: url('../img/avatar_background.png');
+.wolf-masthead {
+    opacity: 0.9;
 }
 
-#avatar {
-  background-image: url('../img/avatar_idle_frames.png');
-}
-
-@keyframes avatar-idle-animation {
-  7%, 100% {
-    background-position: -520px, left center;
-  }
-}
-
-.avatar-idle {
-  background-position: left center;
-  animation: avatar-idle-animation 5s steps(2, end) infinite;
-  -webkit-animation: avatar-idle-animation 5s steps(2, end) infinite;
-  animation-delay: 5s;
-}
+.fading-border {
+  opacity: 0.7;
+  margin: 0;
+  border:none;
+  height: 2px;
+  background: white;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(var(--color-1)), to(var(--color-1)), color-stop(20%, white), color-stop(80%, white));}
 
 .light-hr {
   border-top: 2px solid #FFFFFF;
