@@ -76,6 +76,24 @@ h1, h2, h3, h4 {
 
 /* end HEADER */
 
+.welcome {
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome img {
+  margin-top: 6px;
+}
+
+@media (min-width: 768px) {
+  .welcome .img-container {
+    float: right;
+  }
+}
+
+
 /* SECTIONS */
 
 .icon-and-line {
@@ -169,7 +187,7 @@ h1, h2, h3, h4 {
 
 /* PORTFOLIO */
 
-.portfolio-item {
+.portfolio-item, .bg-light img {
     box-shadow:
     	0 0 0 4px #1d4152,
       4px 4px 0 4px #afc2cb;
@@ -354,8 +372,9 @@ h1, h2, h3, h4 {
     margin: 0.4rem 1.5rem 1rem 0rem;
 }
 
-.portfolio-modal-text img.noborder {
+.bg-light img.noborder {
   border-width: 0px !important;
+  box-shadow: none;
 }
 
 p.portfolio-modal-long-title {

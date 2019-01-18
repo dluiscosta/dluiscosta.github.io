@@ -1,3 +1,17 @@
+function keep_welcome() {
+  var els = document.getElementsByClassName("welcome");
+  if (els.length != 0) {
+    var welcome = els[0];
+    var window_height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    welcome_position = window.pageYOffset + welcome.getBoundingClientRect().top;
+    welcome_height = window_height - welcome_position;
+    welcome.style.height = welcome_height + "px";
+    console.log(welcome, window_height, welcome_height, welcome_position, welcome.style.height);
+  } else {
+    console.log("Welcome div was not found.")
+  }
+}
+
 function hyphenate_titles() {
   my_titles_ul = document.getElementById("my-titles");
   if (my_titles_ul != null) {
@@ -30,6 +44,7 @@ function hyphenate_titles() {
 
 function init() {
   hyphenate_titles();
+  keep_welcome();
 }
 
 onload = init
