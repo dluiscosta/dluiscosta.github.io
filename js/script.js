@@ -5,7 +5,7 @@ function keep_welcome() {
     var window_height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     welcome_position = window.pageYOffset + welcome.getBoundingClientRect().top;
     welcome_height = window_height - welcome_position;
-    welcome.style.height = welcome_height + "px";
+    welcome.style.minHeight = welcome_height + "px";
     console.log(welcome, window_height, welcome_height, welcome_position, welcome.style.height);
   } else {
     console.log("Welcome div was not found.")
