@@ -78,8 +78,8 @@ function keep_dominant_borders() {
       dominant_color = extract_dominant(img_src);
 
       if(dominant_color) {
-        el.style.outlineColor = dominant_color;
         el.style.borderColor = dominant_color;
+        el.style.backgroundColor = dominant_color;
       }
     }
   }
