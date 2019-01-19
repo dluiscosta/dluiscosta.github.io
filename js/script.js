@@ -1,3 +1,90 @@
+function keep_portfolio_items() {
+  // Hardcoding the dominant colors for each portfolio item's cover, in RGB
+  var dict = {
+    'tcc':'91, 72, 102'
+  };
+
+  var els = document.getElementsByClassName("portfolio-item");
+  if (els.length != 0) {
+    var i = 0;
+    for (i = 0; i < els.length; i += 1) {
+      el = els[i]
+      name = el.getAttribute('href').split('-').slice(-1)[0];
+      overlay = el.childNodes[1];
+      description = overlay.childNodes[1];
+      technologies = overlay.childNodes[3];
+
+      // Check dominant color for the item
+      color = dict[name]
+      if(!color) {
+        color = '3, 58, 84'; //default dark blue
+      }
+
+      // Set background colors css for each div
+      css_tech = '.portfolio-item-' + name + ' .portfolio-item-technologies {background-color: rgb(' + color + ',0.4)}';
+      css_desc = '.portfolio-item-' + name + ' .portfolio-item-description {background-color: rgb(' + color + ',0.9)}';
+      hover = '.portfolio-item-' + name + ':hover';
+      css_hover = hover + ' .portfolio-item-space, '
+                + hover + ' .portfolio-item-technologies, '
+                + hover + ' .portfolio-item-description ' +
+                '{background-color: rgba(' + color + ', 0.9);}';
+
+      css = css_tech + " " + css_desc + " " + css_hover;
+
+      // Append css
+      var style = document.createElement('style');
+      if (style.styleSheet) {
+          style.styleSheet.cssText = css;
+      } else {
+          style.appendChild(document.createTextNode(css));
+      }
+      document.getElementsByTagName('head')[0].appendChild(style);
+
+    }
+  }
+}
+
+function extract_dominant(img_src) {
+  // Hardcoding the dominant colors with a src to color dict
+  var dict = {
+    'img/wolf.jpeg':'#583e2e',
+    'img/portfolio/tcc/cover.jpg':'#4e585e'
+  };
+  dominant_color = dict[img_src];
+  if(!dominant_color) {
+    dominant_color = '#FF0000';
+    console.log("Could not find dominant color.")
+  }
+  return dominant_color;
+}
+
+
+function keep_dominant_borders() {
+  var els = document.getElementsByClassName("dominant-border");
+  if (els.length != 0) {
+    var i = 0;
+    for (i = 0; i < els.length; i += 1) {
+      el = els[i]
+
+      // Determines the image source, checking img src then background image
+      var img_src = '';
+      if (el.tagName.toLowerCase() == 'img') {
+        img_src = el.getAttribute("src");
+      } else {
+        //not implemented
+      }
+
+      // Extract the dominant color from the image (not implemented)
+      dominant_color = extract_dominant(img_src);
+
+      if(dominant_color) {
+        el.style.outlineColor = dominant_color;
+        el.style.borderColor = dominant_color;
+      }
+    }
+  }
+}
+
 function keep_welcome() {
   var els = document.getElementsByClassName("welcome");
   if (els.length != 0) {
@@ -45,6 +132,8 @@ function hyphenate_titles() {
 function init() {
   hyphenate_titles();
   keep_welcome();
+  keep_dominant_borders();
+  keep_portfolio_items();
 }
 
 onload = init
