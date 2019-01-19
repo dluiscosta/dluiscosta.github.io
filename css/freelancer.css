@@ -363,8 +363,8 @@ a:focus, a:hover, a:active {
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: var(--color-3);
-  border-color: var(--color-3);
+  background-color: var(--color-3) !important;
+  border-color: var(--color-3) !important;
 }
 
 .btn-secondary {

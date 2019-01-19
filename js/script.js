@@ -1,9 +1,73 @@
-function keep_portfolio_items() {
+function portfolio_color(name) {
   // Hardcoding the dominant colors for each portfolio item's cover, in RGB
   var dict = {
     'tcc':'91, 72, 102'
   };
+  color = dict[name]
+  if(!color) {
+    color = '3, 58, 84'; //default dark blue
+  }
+  return color
+}
 
+
+function extract_dominant(img_src) {
+  // Hardcoding the dominant colors with a src to color dict
+  var dict = {
+    'img/wolf.jpeg':'#583e2e',
+    'img/portfolio/tcc/cover.jpg':'#4e585e'
+  };
+  dominant_color = dict[img_src];
+  if(!dominant_color) {
+    dominant_color = '#FF0000';
+    console.log("Could not find dominant color.")
+  }
+  return dominant_color;
+}
+
+
+function keep_potfolio_modal() {
+  var els = document.getElementsByClassName("portfolio-modal");
+  if (els.length != 0) {
+    var i = 0;
+    for (i = 0; i < els.length; i += 1) {
+      el = els[i]
+      name = el.getAttribute('id').split('-').slice(-1)[0];
+
+      // Check dominant color for the item
+      color_port = portfolio_color(name);
+      color_bord = extract_dominant("img/portfolio/" + name + "/cover.jpg");
+
+      // Set colors
+      css_cover = "#portfolio-modal-" + name + " .portfolio-modal-image" +
+                  "{border-color: " + color_bord + "}";
+      /*
+      css_title = "#portfolio-modal-" + name + " h2" +
+                  "{color: rgb(" + color_port + ");}";
+      css_icon  = "#portfolio-modal-" + name + " .icon-and-line .section-icon" +
+                  "{color: rgb(" + color_port + ") !important;}";
+      css_line  = "#portfolio-modal-" + name + " .icon-and-line:after," +           "#portfolio-modal-" + name + " .icon-and-line:before" +
+                  "{border-top-color: rgb(" + color_port + ") !important;}";
+
+      css = css_cover + " " + css_title + " " + css_icon + " " + css_line;
+*/
+      css = css_cover
+      
+      // Append css
+      var style = document.createElement('style');
+      if (style.styleSheet) {
+          style.styleSheet.cssText = css;
+      } else {
+          style.appendChild(document.createTextNode(css));
+      }
+      document.getElementsByTagName('head')[0].appendChild(style);
+
+    }
+  }
+}
+
+
+function keep_portfolio_items() {
   var els = document.getElementsByClassName("portfolio-item");
   if (els.length != 0) {
     var i = 0;
@@ -15,10 +79,7 @@ function keep_portfolio_items() {
       technologies = overlay.childNodes[3];
 
       // Check dominant color for the item
-      color = dict[name]
-      if(!color) {
-        color = '3, 58, 84'; //default dark blue
-      }
+      color = portfolio_color(name);
 
       // Set background colors css for each div
       css_tech = '.portfolio-item-' + name + ' .portfolio-item-technologies {background-color: rgb(' + color + ',0.4)}';
@@ -43,21 +104,6 @@ function keep_portfolio_items() {
     }
   }
 }
-
-function extract_dominant(img_src) {
-  // Hardcoding the dominant colors with a src to color dict
-  var dict = {
-    'img/wolf.jpeg':'#583e2e',
-    'img/portfolio/tcc/cover.jpg':'#4e585e'
-  };
-  dominant_color = dict[img_src];
-  if(!dominant_color) {
-    dominant_color = '#FF0000';
-    console.log("Could not find dominant color.")
-  }
-  return dominant_color;
-}
-
 
 function keep_dominant_borders() {
   var els = document.getElementsByClassName("dominant-border");
@@ -134,6 +180,7 @@ function init() {
   keep_welcome();
   keep_dominant_borders();
   keep_portfolio_items();
+  keep_potfolio_modal()
 }
 
 onload = init
