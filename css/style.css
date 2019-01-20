@@ -349,6 +349,7 @@ section {
 
 .portfolio-modal .portfolio-item-technologies {
   justify-content: center;
+  height: auto;
 }
 
 .portfolio-modal-text {
