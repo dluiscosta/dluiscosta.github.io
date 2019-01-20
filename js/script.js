@@ -19,7 +19,7 @@ function extract_dominant(img_src) {
   };
   dominant_color = dict[img_src];
   if(!dominant_color) {
-    dominant_color = '#FF0000';
+    dominant_color = '#033a54';
     console.log("Could not find dominant color.")
   }
   return dominant_color;
@@ -52,7 +52,7 @@ function keep_potfolio_modal() {
       css = css_cover + " " + css_title + " " + css_icon + " " + css_line;
 */
       css = css_cover
-      
+
       // Append css
       var style = document.createElement('style');
       if (style.styleSheet) {

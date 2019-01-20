@@ -194,6 +194,10 @@ h1, h2, h3, h4 {
   box-shadow: 7px 7px 0 0px #afc2cb;
 }
 
+.portfolio-item {
+  max-width: 400px;
+}
+
 .portfolio-item-overlay {
   display: flex;
   flex-direction: column-reverse;
