@@ -44,6 +44,14 @@ section {
     min-height: 100vh;
 }
 
+@media (max-width: 991px) {
+  .hide-sm {
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+
 /* HEADER */
 
 .wolf-masthead {
