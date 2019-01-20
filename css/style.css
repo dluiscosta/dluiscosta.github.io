@@ -55,8 +55,11 @@ section {
 
 /* HEADER */
 
-.wolf-masthead {
+img.wolf-masthead {
     opacity: 0.9;
+    border-width: 0px !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
 }
 
 .fading-border {
@@ -173,9 +176,8 @@ section {
 /* ABOUT ME */
 
 .minha-foto {
-  box-shadow:
-  	0 0 0 4px #FFF,
-    4px 4px 0 4px var(--color-3);
+  border-width: 4px !important;
+  border-radius: 0 !important;
   margin-top: 6px;
 }
 
@@ -204,6 +206,13 @@ section {
   border-radius: 5px;
   border-style: solid;
   box-shadow: 7px 7px 0 0px #afc2cb;
+}
+
+.bg-primary img {
+  border-width: 2px;
+  border-radius: 5px;
+  border-style: solid;
+  box-shadow: 7px 7px 0 0px var(--color-3);
 }
 
 .portfolio-item {

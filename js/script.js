@@ -1,7 +1,8 @@
 function portfolio_color(name) {
   // Hardcoding the dominant colors for each portfolio item's cover, in RGB
   var dict = {
-    'tcc':'91, 72, 102'
+    'tcc':'91, 72, 102',
+    'portfolio':'3, 66, 110'
   };
   color = dict[name]
   if(!color) {
@@ -12,15 +13,18 @@ function portfolio_color(name) {
 
 
 function extract_dominant(img_src) {
-  // Hardcoding the dominant colors with a src to color dict
+  // Hardcoding the dominant colors with a src-to-color dict
+  // using https://www.imgonline.com.ua/eng/get-dominant-colors.php
   var dict = {
     'img/wolf.jpeg':'#583e2e',
-    'img/portfolio/tcc/cover.jpg':'#4e585e'
+    'img/minha_foto.png':'#ddd3d9',
+    'img/portfolio/tcc/cover.jpg':'#4e585e',
+    'img/portfolio/portfolio/cover.jpg':'#03426e'
   };
   dominant_color = dict[img_src];
   if(!dominant_color) {
     dominant_color = '#033a54';
-    console.log("Could not find dominant color.")
+    console.log("Could not find dominant color for " + img_src);
   }
   return dominant_color;
 }
