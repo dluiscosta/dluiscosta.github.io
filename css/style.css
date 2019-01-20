@@ -343,24 +343,16 @@ h1, h2, h3, h4 {
   border: 0px;
 }
 
+.portfolio-modal .portfolio-item-technologies {
+  justify-content: center;
+}
+
 .portfolio-modal-text {
   text-align: center;
 }
 
 .portfolio-modal-text p {
   text-align: left;
-}
-
-.portfolio-modal-text a, .portfolio-modal-text a:link, .portfolio-modal-text a:active{
-  color: inherit;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.portfolio-modal-text a:hover, .portfolio-modal-text a:active{
-  color: inherit;
-  text-decoration: underline;
-
 }
 
 .portfolio-modal-text img{
