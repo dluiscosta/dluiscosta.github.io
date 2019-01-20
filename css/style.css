@@ -2,7 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-h1, h2, h3, h4 {
+.text-uppercase {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
 }
