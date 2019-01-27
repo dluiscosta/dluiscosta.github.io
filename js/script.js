@@ -2,7 +2,8 @@ function portfolio_color(name) {
   // Hardcoding the dominant colors for each portfolio item's cover, in RGB
   var dict = {
     'tcc':'91, 72, 102',
-    'portfolio':'3, 66, 110'
+    'portfolio':'3, 66, 110',
+    'pythongame':'84, 55, 64'
   };
   color = dict[name]
   if(!color) {
@@ -19,7 +20,8 @@ function extract_dominant(img_src) {
     'img/wolf.jpeg':'#583e2e',
     'img/minha_foto.png':'#ddd3d9',
     'img/portfolio/tcc/cover.jpg':'#4e585e',
-    'img/portfolio/portfolio/cover.jpg':'#03426e'
+    'img/portfolio/portfolio/cover.jpg':'#03426e',
+    'img/portfolio/pythongame/cover.jpg': '#1a0d12'
   };
   dominant_color = dict[img_src];
   if(!dominant_color) {

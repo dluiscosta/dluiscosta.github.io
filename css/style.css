@@ -334,6 +334,10 @@ img.wolf-masthead {
   background-color: #de8c2f; border-color:#b37227;}
 .portfolio-item-technologies .technology-matplotlib {
   background-color: #20557c; border-color:#194361;}
+.portfolio-item-technologies .technology-matplotlib {
+  background-color: #20557c; border-color:#194361;}
+.portfolio-item-technologies .technology-pygame {
+  background-color: #d6c751; border-color: #9e933e;}
 
 .portfolio-modal h2 {
   font-weight: bold;
