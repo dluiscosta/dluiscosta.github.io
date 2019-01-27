@@ -285,6 +285,21 @@ img.wolf-masthead {
   margin: .6rem 1rem;
 }
 
+.portfolio-item-description p.portfolio-item-small-title {
+  display: none;
+}
+
+@media(max-width: 768px) {
+  .portfolio-item-description p.portfolio-item-long-title {
+    display: none;
+  }
+
+  .portfolio-item-description p.portfolio-item-small-title {
+    display: block;
+  }
+}
+
+
 .portfolio-item-description p.portfolio-item-more {
   text-align: right;
   font-size: small;
