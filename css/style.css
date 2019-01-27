@@ -80,9 +80,11 @@ img.wolf-masthead {
 }
 
 #my-titles {
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-weight: 700;
+  font-synthesis: none;
 }
 
 .my-title {

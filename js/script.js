@@ -159,7 +159,7 @@ function hyphenate_titles() {
       var current_title = my_titles_lis[i].getBoundingClientRect();
       if (current_title.top == previous_title.top) { //if on the same line
         // Inserts hyphen
-        var hifen = document.createTextNode(" - ");
+        var hifen = document.createTextNode("\u00A0-\u00A0\u00A0");
         my_titles_ul.insertBefore(hifen, my_titles_lis[i]);
         i += 1;
 
