@@ -406,6 +406,7 @@ img.wolf-masthead {
 .portfolio-modal-text img.image-full {
     max-width: 100%;
     margin: 1rem auto 2rem auto;
+    box-shadow: none;
 }
 
 .portfolio-modal-text img.image-side {
