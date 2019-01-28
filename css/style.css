@@ -390,8 +390,38 @@ img.wolf-masthead {
   height: auto;
 }
 
+.portfolio-modal-repository {
+  display: block;
+  text-align: right;
+  font-size: small;
+  margin-bottom: -.5rem;
+  margin-top: .5rem;
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  .portfolio-modal-repository {
+    margin-top: 1.5rem;
+    text-align: center;
+    margin-left: 2rem;
+  }
+}
+
+.portfolio-modal-repository:hover, .portfolio-modal-repository:active, .portfolio-modal-repository:visited {
+  color: inherit;
+}
+
+.portfolio-modal-repository img {
+  margin-left: .5rem;
+  width: 1.5rem;
+  height: auto;
+  box-shadow: none;
+  border: none;
+}
+
 .portfolio-modal-text {
   text-align: center;
+  margin-top: 3rem;
 }
 
 .portfolio-modal-text p {
