@@ -184,12 +184,17 @@ function hyphenate_titles() {
   }
 }
 
+function show_page() {
+  document.getElementsByTagName("BODY")[0].style.visibility = 'visible';
+}
+
 function init() {
   hyphenate_titles();
   keep_welcome();
   keep_dominant_borders();
   keep_portfolio_items();
-  keep_potfolio_modal()
+  keep_potfolio_modal();
+  show_page();
 }
 
 onload = init
