@@ -21,7 +21,10 @@ function extract_dominant(img_src) {
     'img/minha_foto.png':'#ddd3d9',
     'img/portfolio/tcc/cover.jpg':'#4e585e',
     'img/portfolio/portfolio/cover.jpg':'#03426e',
-    'img/portfolio/pythongame/cover.jpg': '#1a0d12'
+    'img/portfolio/pythongame/cover.jpg': '#1a0d12',
+    'img/portfolio/tcc/half_cover.jpg':'#4e585e',
+    'img/portfolio/portfolio/half_cover.jpg':'#69818c',
+    'img/portfolio/pythongame/half_cover.jpg': '#1a0d12'
   };
   dominant_color = dict[img_src];
   if(!dominant_color) {

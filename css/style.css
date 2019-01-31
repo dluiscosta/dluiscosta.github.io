@@ -362,27 +362,11 @@ img.wolf-masthead {
   font-style: italic;
 }
 
-.portfolio-modal-image {
+.portfolio-modal .portfolio-modal-cover {
   border: solid 2px;
-  width: 100%;
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-}
-
-.portfolio-modal-image .dummy {
-  margin-top: 36%;
-}
-
-.portfolio-modal-image img.image-cover {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
   border-radius: 0;
-  border: 0px;
+  width: 100%;
+  box-shadow: none;
 }
 
 .portfolio-modal .portfolio-item-technologies {
